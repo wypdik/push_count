@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <script src="/socket.io/socket.io.js"></script>
+    <title>みんなでボタンを押して数字を増やそう!</title>
+</head>
+<body>
+  <h1>みんなでボタンを押して数字を増やそう!</h1>
+  <p>
+  <span id="press-button">0</span>回
+  </p>
+  <input type="button" value="ボタン" onclick="counter()">
+</body>
+<script>
+  let socket = io();
+  var cnt = 0;
+  function counter(){
+    socket.emit("plus",cnt);
+  }
+  socket.on("member-plus",(test)=>{
+    cnt = test;
+    document.getElementById("press-button").innerHTML = test;
+  });
+
+</script>
+</html>
