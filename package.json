@@ -2,5 +2,23 @@
   "dependencies": {
     "express": "^4.18.1",
     "socket.io": "^4.5.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "push_count",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wypdik/push_count.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wypdik/push_count/issues"
+  },
+  "homepage": "https://github.com/wypdik/push_count#readme",
+  "description": ""
 }
